@@ -1,7 +1,8 @@
 # run_analysis.R CodeBook
  
-This code book describes the variables, the data, and any transformations or work that performed to clean up the data
+This code book describes data, variables, and any transformations or work that performed to clean up the data
 
+# data
 Human Activity Recognition Using Smartphones Dataset
 Version 1.0
 ==================================================================
@@ -73,14 +74,18 @@ This dataset is distributed AS-IS and no responsibility implied or explicit can 
 Jorge L. Reyes-Ortiz, Alessandro Ghio, Luca Oneto, Davide Anguita. November 2012.
 
 
+# main variables:
+- features; list of all features
+- data.train; train dataset
+- data.test; test dataset
+- data.all: dataset obtained merging train and test datasets
+- data.sub: dataset with only the measurements on the mean and standard deviation for each measurement, descriptive activity names and descriptive variable names
 
-variables:
-- features; see features_info.txt
-- data.train
-- data.test
-- data.all: merged data sets
-- data.sub: 
 
-data:
-- UCI HAR Dataset
-- 
+# work performed to clean up the data
+0) zipped data are downloaded from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+1) training and test sets are merged to create one data set
+2) measurements on the mean and standard deviation for each measurement are extracted
+3) descriptive activity names are used to name the activities
+4) descriptive variable names are appropriately labelled
+5) a second, independent tidy data set with the average of each variable for each activity and each subject is created
